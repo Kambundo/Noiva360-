@@ -1,0 +1,38 @@
+.idioma {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1;
+    width: 100px;
+  }
+  
+  .dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .dropdown-menu li:hover {
+    background-color: #f0f0f0;
+  }
+  

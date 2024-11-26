@@ -1,0 +1,281 @@
+.banner{
+    z-index: 2;
+    color: #FFF;
+    position: relative;
+    padding-left: 50px;
+    padding-right: 35px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 590px;
+    overflow: hidden;
+}
+.banner-left{
+    width: 690px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.banner-right{
+    width: 700px;
+    
+
+}
+.banner-title{
+    color: #b2b2b2;
+    display: none;
+}
+
+.b-content-h3{
+    font-size: 55px;
+    /* width: 600px; */
+    color: #424040;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.b-content-h6{
+    /* width: 600px; */
+    color: #7f7777;
+    margin-bottom: 25px;
+}
+
+/* Editando o carrousel */
+.c-container{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+.card-carousel{
+    width: 400px;
+    height: 450px;
+    border-radius: 15px;
+    transition: .2s ease-in;
+}
+.imagem-carousel{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: .2s ease-in;
+}
+.grupo-carousel{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card-carousel-2{
+    width: 270px;
+    height: 150px;
+    border-radius: 15px;
+    transition: .2s ease-in;
+    object-fit: cover;
+}
+.card-carousel:hover, .card-carousel-2:hover, .card-carousel-3:hover{
+    /* transform: scale(0.9);
+    transition: .2s ease-in; */
+}
+
+.card-carousel-3{
+    width: 280px;
+    height: 380px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 380px;
+    transition: .2s ease-in;
+}
+.imgg3{
+    width: 260px;
+    height: 360px;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: .2s ease-in;
+}
+
+.card-carousel:hover .imagem-carousel{
+    width: 405px;
+    height: 470px;
+    transition: .2s ease-in;
+}
+
+.card-carousel-2:hover .imagem-carousel{
+    width: 280px;
+    height: 160px;
+    transition: .2s ease-in;
+}
+
+.card-carousel-3:hover .imgg3{
+    width: 270px;
+    height: 370px;
+    transition: .2s ease-in;
+}
+
+
+.v{
+    width: 280px;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #cccccc47;
+    margin: 10px;
+    position: absolute;
+    animation-delay: .3s;
+}
+.v1{
+    animation: sticky 6s infinite;
+    animation-delay:.1s
+}
+.v2{
+    animation: sticky 6s infinite;
+    animation-delay:.3s;
+}
+.v3{
+    animation: sticky 6s infinite;
+    animation-delay:4s
+}
+
+
+@keyframes sticky {
+    0%{
+       transform: scale(1);
+        
+    }
+    50%{
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1.3);
+        opacity: 0;
+    }
+    
+}
+
+
+/* btn more */
+.btn-more{
+    background: blueviolet;
+    border: none;
+    background-size: 200%;
+    color: #FFF;
+    padding: 14px 20px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 4px; */
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.4s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+.btn-more:hover{
+    background-color: #8a2be2c2;
+    transition: 0.4s ease, transform 0.2s ease;
+    background-position: right;
+  transform: scale(1.05);
+}
+
+/* comentario */
+
+.card-carousel:hover .comment-people{
+    /* top: -200px; */
+    transition: .2s ease-in;
+   transform: scale(1.2);
+   background-color: #b2b2b2;
+   box-shadow: -1px -1px 1px 1px #f9f9f9;;
+}
+.card-carousel:hover .date-post,.card-carousel:hover  .nome-casal{
+    color: #000;
+}
+.comment-people{
+    border: 1px solid #d5d5d5;
+    width: 220px;
+    height: 180px;
+    position: relative;
+    top: -110px;
+    border-radius: 6px;
+    right: 80px;
+    background-color: #FFF;
+    z-index: 2;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: .2s ease-in;
+}
+.header-comment{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.avatar-comment{
+    object-fit: cover;
+    border: 1px solid #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background: #ddd;
+    display: flex
+}
+.img-avatar-comment{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background: #ddd;
+}
+.nome-casal-date-post{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.nome-casal{
+    color: #555252;
+    font-size: 13px;
+}
+.date-post{
+    color: #8f8a8a;
+    font-size: 10px;
+}
+.comment-pp{
+    color: #424040;
+    font-size: 13px;
+    min-height: 100px;
+}
+.star-comment{
+    color: orange;
+    display: flex;
+    gap: 10px;
+}
+
+
+/* explorar more */
+.grupo-exp{
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+.explorar{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #424040;
+    font-size: 11px;
+    margin-top: 20px;
+    background-color: #8a2be254;
+    margin-left: 50px;
+}
+
+.letter-explore{
+    position: relative;
+    top: 10px;
+
+}
+.seta{
+    position: relative;
+    top: 8px;
+}

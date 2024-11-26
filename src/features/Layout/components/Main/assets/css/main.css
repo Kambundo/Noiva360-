@@ -1,0 +1,15 @@
+.main-content{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+}
+.center-elements{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1350px;
+    margin: 0 auto;
+    
+
+}

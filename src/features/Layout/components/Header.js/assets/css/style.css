@@ -1,0 +1,136 @@
+/*
+  Theme Name: NOIVA_360º
+  Author: DEV IGS
+  Support: ANDREWKAMBUNDO@GMAIL.COM
+  Description: CRIAÇÃO DE UM SITE DE CASAMENTO
+  Version: 1.0
+*/
+
+
+header{
+
+}
+nav{
+  top: 0;
+    
+    width: 100%;
+    height: 100px;
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 75px;
+}
+.border-header{
+    width: 70%;
+    height: 750px;
+    position: absolute;
+    /* background: #02136f; */
+    background-color: #cccccc47;
+    border-bottom-right-radius: 60px;
+}
+
+.logo{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.grupo-header {
+  display: flex;
+  gap: 40px;
+  margin-right: 280px;
+}
+
+.nav_link{
+    color: #7f7777;
+    font-weight: 500;
+    text-decoration: none;
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+}
+.menu-nav{
+   
+    /* padding: 11px 10px 11px 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: inline-block;
+    padding-right: 10px; /* Espaço para o badge */
+    
+}
+
+
+.nav_link:hover .menu-nav{
+    /* background-color: orange; */
+    /* padding: 11px 10px 11px 10px; */
+    color: #212121;
+    border-radius: 4px;
+    transition: .2s ease-in-out;
+}
+
+ 
+  
+/* avatar grupo */
+
+.grupo-login{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 200px;
+
+}
+.avatar-user{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar-user > img{
+  width: 100%;
+  border-radius: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-register-slesh{
+  display: flex;
+  gap: 4px;
+}
+.login-register-slesh > a{
+  color: #7f7777;
+  text-decoration: none;
+  transition: .1s ease-in-out;
+}
+.slesh{
+  color: #7f7777;
+  position: relative;
+  top: 2px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+ /* Efeito ao passar o mouse */
+ .login-register-slesh > a:hover {
+  background-position: right;
+  transform: scale(1.05);
+  transition: .1s ease-in-out;
+}
+
+.name-anonimo{
+  font-weight: 500;
+}
