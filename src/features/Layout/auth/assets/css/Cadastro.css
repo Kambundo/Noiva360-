@@ -1,0 +1,339 @@
+@font-face{
+    font-family: 'Angelina Beaty';
+    src: url('../fonts/Angelia\ Beauty.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+.cadastro-container{
+    width: 1100px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.inputBox{
+    position: relative;
+    width: 100%;
+}
+.inputBox select{
+    width: 100%;
+    padding: 10px;
+    border:  1px solid #FFD1DC;
+    border-radius: 5px;
+    outline: none;
+    color: #000;
+    font-size: 1em;
+    transition: 0.5s;
+}
+.inputBox select:valid ~ span,
+.inputBox select:focus ~ span{
+    color: #212121;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background-color: #FFF;
+    border-left: 1px solid #FFD1DC;
+    border-right: 1px solid #FFD1DC;
+    letter-spacing: 0.2em;
+}
+
+.inputBox select:valid,
+.inputBox select:focus{
+    border: 1px solid #FF8AC5;
+    
+}
+
+.inputBox:nth-child(2) select:valid ~ span,
+.inputBox:nth-child(2) select:focus ~ span{
+    background-color: #FFD1DC;
+    color: #212121;
+    border-radius: 2px;
+}
+
+.inputBox:nth-child(3) select:valid ~ span,
+.inputBox:nth-child(3) select:focus ~ span{
+    background-color: #684c5a;
+    color: #212121;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+.inputBox input{
+    width: 100%;
+    padding: 10px;
+    border:  1px solid #FFD1DC;
+    border-radius: 5px;
+    outline: none;
+    color: #000;
+    font-size: 1em;
+    transition: 0.5s;
+}
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: #212121;
+    /* text-transform: uppercase; */
+    transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span{
+    color: #212121;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background-color: #FFF;
+    border-left: 1px solid #FFD1DC;
+    border-right: 1px solid #FFD1DC;
+    letter-spacing: 0.2em;
+}
+
+.inputBox input:valid,
+.inputBox input:focus{
+    border: 1px solid #FF8AC5;
+    
+}
+
+.inputBox:nth-child(2) input:valid ~ span,
+.inputBox:nth-child(2) input:focus ~ span{
+    background-color: #FFD1DC;
+    color: #212121;
+    border-radius: 2px;
+}
+
+.inputBox:nth-child(3) input:valid ~ span,
+.inputBox:nth-child(3) input:focus ~ span{
+    background-color: #684c5a;
+    color: #212121;
+    border-radius: 2px;
+}
+
+.cadastro-gp{
+    width: 50%;
+    height: 800px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.cadastro-gp:nth-child(2){
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-right: 50px;
+}
+.cadastro-gp img{
+    width: 470px;
+    height: 729px;
+}
+
+.text-postion-absolute{
+    width: 470px;
+    display: flex;
+    position: absolute;
+}
+.cadastro-position-relative{
+    width: 100%;
+    height: 729px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 71px;
+    background: #000000a3;
+}
+.sim-quero{
+    font-family: Angelina Beaty;
+    font-size: 50px;
+    color: #FFF;
+    font-weight: normal !important;
+    text-decoration: none;
+    text-align: center;
+}
+.organizar-casamento{
+    color: #FFF;
+    font-size: 20px;
+}
+
+.c-gp2{
+    padding-top: 66px;
+    padding-left: 50px;
+    box-shadow: 2px 2px 2px #f9f9f9;
+}
+
+.c-gp2-login{
+    padding-top: 156px !important;
+}
+
+.title-cadastro{
+    color: #ffffff !important;
+    position: relative;
+    top: -24px;
+}
+
+.slogan-noiva360{
+    font-size: 20px;
+    padding-bottom: 50px;
+    color: #ffffff !important;
+}
+
+.body-cadastro{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grupo-dd{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+
+.termos-uso{
+    font-size: 13px;
+    display: flex;
+    line-height: 24px;
+}
+.termos-uso > a{
+    color: #212121;
+    text-decoration-line:underline ;
+    line-height: 0px;
+
+}
+.termos-uso > a:hover{
+    color: orange;
+}
+.checkbox-cadastro{
+    padding-right: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.btn-cadastro{
+    width: 100%;
+    height: 50px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFD1DC;
+    cursor: pointer;
+    transition: .5s;
+    margin-bottom: 10px;
+
+}
+.btn-cadastro:hover{
+    background-color: #FF8AC5;
+}
+
+.possui-conta{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    top: -18px;
+    height: 18px;
+}
+.possui-conta >a{
+    height: 45px;
+    color: #FF8AC5;
+
+}
+
+
+/* Facebook/Apple Google */
+.google-facebook-group{
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.btn-auth{
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+    /* padding-right: 10px; */
+    gap: 105px;
+    width: 100%;
+    cursor: pointer;
+    height: 50px;
+    border: 1px solid #FF8AC5;
+    transition: .3s ease-out;
+    background-color: transparent;
+    outline: none;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.facebook:hover{
+    background-color: #335795;
+    border: transparent;
+    color: #FFF;
+}
+.facebook-svg{
+    fill: #335795
+}
+.facebook:hover .facebook-svg{
+    fill: #FFF
+}
+.google:hover{
+    background-color: #ddd;
+}
+.apple:hover{
+    background-color: #000;
+    color: #FFF;
+    border: none;
+}
+.logo-svg{
+    position: relative;
+    top: 3px;
+}
+.google-svg{
+    fill: red;
+}
+.apple-svg{
+    fill: #000;
+}
+.apple:hover .apple-svg{
+    fill: #fff;
+}
+
+
+
+/* editando logo */
+.header-cadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo-header-cadastro{
+    width: 200px;
+    height: 200px;
+}
+.logo-header-cadastro > .logo-noiva{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+
+
+
+
+

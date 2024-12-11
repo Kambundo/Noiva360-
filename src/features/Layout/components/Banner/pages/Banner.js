@@ -1,117 +1,53 @@
 import React, { useState, useEffect } from 'react'
 import "../assets/css/banner.css";
-import marina from "../assets/img/marina.JPG"
-import mm2 from "../assets/img/mm2.JPG"
-import mm3 from "../assets/img/mm3.JPG"
+import imagem from "../assets/img/casamento.JPG"
+import imagem2 from "../assets/img/marina.JPG"
+import imagem3 from "../assets/img/mm2.JPG"
+import roda1 from "../assets/img/ROD.webp"
+import roda from "../assets/img/RODA.webp"
+import flor from "../assets/img/flor.webp"
+import flores from "../assets/img/flores.webp"
+import ff from "../assets/img/flor3.webp"
 import { Link } from 'react-router-dom';
 export default function Banner() {
-    const [text, setText] = useState(''); 
-    const [text2, setText2] = useState(''); 
-    const [text3, setText3] = useState(''); 
-    const [noiva360, setNoiva360] = useState('');
-    const [desc, setDesc] = useState('');
 
-    const descricao = ' Noiva 360º é a solução definitiva para casais que  desejam planejar o casamento  dos sonhos de maneira prática e sem complicações. Nossa plataforma oferece uma experiência completa, conectando você aos melhores fornecedores e serviços necessários para tornar o seu grande dia inesquecível';
-
-    const titleNoiva = 'Noiva360º';
-    const fullText = 'A Plataforma Completo'; 
-    const fullText2 = 'Para o seu Casamento '; 
-    const fullText3 = ' Perfeito'; 
-    useEffect(() => { 
-        let index = 0; 
-        const timer = setInterval(() => { 
-            setNoiva360(titleNoiva.substring(0, index + 1)); 
-            index++; if (index === titleNoiva.length) { 
-                clearInterval(timer); 
-            }}, 100);
-            return () => clearInterval(timer);
-        }, []); 
-
-        useEffect(() => { 
-            let index = 0; 
-            const timer = setInterval(() => { 
-                setDesc(descricao.substring(0, index + 1)); 
-                index++; if (index === descricao.length) { 
-                    clearInterval(timer); 
-                }}, 10);
-                return () => clearInterval(timer);
-            }, []);     
-    
-    useEffect(() => { let index = 0; const timer = setInterval(() => { setText(fullText.substring(0, index + 1)); index++; if (index === fullText.length) { clearInterval(timer); } }, 100); return () => clearInterval(timer);}, []); 
-    useEffect(() => { let index = 0; const timer = setInterval(() => { setText2(fullText2.substring(0, index + 1)); index++; if (index === fullText2.length) { clearInterval(timer); } }, 100); return () => clearInterval(timer);}, []); 
-    useEffect(() => { let index = 0; const timer = setInterval(() => { setText3(fullText3.substring(0, index + 1)); index++; if (index === fullText3.length) { clearInterval(timer); } }, 100); return () => clearInterval(timer);}, []); 
-  
-    // return  }
   return (
-    <div className='banner'>
-        <div className='banner-left'>
-            <div className='banner-title'>Inspira-te com os nossos modelos</div>
-            <div className='b-content-h3'>
-                <div><span style={{color:'orange'}}>{noiva360} </span> </div>
-                <div>{text}</div>
-                <div>{text2}</div>
-                <div>{text3}</div>
-            </div>
-            <div className='b-content-h6'>
-               {desc}
-            </div>
-            <Link to={'sobre-nos'} className='btn-more'>Saber mais</Link>
-            <div className='grupo-exp'>
-                 <div className='explorar'>
-                <div className='letter-explore'>Explorar</div> 
-                <div className='seta'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" style={{fill: '#424040',    transform: 'rotate(95deg)', msfilter: ''}}><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z" /></svg>
-                </div>
-            </div>
-            </div>
-           
+    <div className='banner-container'>
+    <div className='efeito-onda-div'>
+    <svg xmlns="http://www.w3.org/2000/svg" className='efeito-onda' xmlnsXlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" version="1.1" viewBox="96.2 216.9 808.8 565.0" x={0} xmlSpace="preserve" y={0} zoomAndPan="magnify" style={{fill: 'rgb(0, 0, 0)'}} original_string_length={1009}><g id="__id18_sjzw7mobxd"><path d="M96.19,218.07c3.67,0,5.87,0,8.08,0c263.65,0,527.3,0,790.95,0.02c9.78,0,8.54-1.18,8.54,8.75 c0.02,182.8,0.02,365.61,0.02,548.41c0,2.18,0,4.37,0,6.7c-3.64-0.08-5.8-2.38-8.32-3.86c-32.98-19.36-59.29-45.81-81.29-76.77 c-14.07-19.8-27.51-40.05-45.48-56.78c-15.54-14.46-33.59-24.6-53.06-32.53c-17.97-7.31-36.69-12.32-55.52-16.64 c-15.49-3.55-31.36-5.49-47.08-8.07c-18.72-3.07-37.41-6.28-55.35-12.71c-38.47-13.77-73.96-33.09-106.03-58.38 c-27.26-21.5-49.08-47.75-66.04-78.11c-10.91-19.54-18.18-40.68-27.82-60.77c-8.43-17.55-18.5-33.92-34.89-45.33 c-15.28-10.64-32.33-17.53-50.22-22.19c-49.41-12.87-95.79-32.69-138.81-60.18C120.39,241.03,107.75,231.21,96.19,218.07z" style={{fill: '#f8f8f8'}} /></g></svg>
+      
+    </div>
+    
+    <div className='banner section-banner'>
+
+        <div className='grupo-img-banner'>
+          <img src={imagem} alt='imaagem do banner' className='imagem-center' />
+          <img src={roda} className='roda-banner'/>
         </div>
-        <div className='banner-right'>
-            <div className='carousel-container'>
-                <div className='c-container'>
-                    <div className='card-carousel'>
-                        <img className='imagem-carousel'
-                            src={mm3}
-                        alt='noivos' />
-                        <div className="comment-people">
-                            <div className='header-comment'>
-                                <div className='avatar-comment'>
-                                    <img src={marina} className='img-avatar-comment' alt='comentario-user'/>
-                                </div>
-                                <div className='nome-casal-date-post'>
-                                    <div className='nome-casal'>Casal Andrade</div>
-                                    <div className='date-post'>17/11/2024</div>
-                                </div>
-                            </div>
-                            <div className='comment-pp'>
-                                <span>"</span>depois de certas apunhaladas você aprende que maturidade é nem deixar o que te machucou mudar quem você é<span>."</span>
-                            </div>
-                            <div className='star-comment'>*****</div>
-                        </div>
-                    </div>
-                   <div className='grupo-carousel'>
-                   <div className='card-carousel-2'>
-                    <img className='imagem-carousel'
-                            src={mm2}
-                        alt='noivos' />
-                    </div>
-              <div className='imagem-responsive'>
-              <div className='card-carousel-3 '>
-              <div className='v v1' />
-              <div className='v v2' />
-              <div className='v v3' />
-                    <img className='imgg3'
-                            src={marina}
-                        alt='noivos' />
-                    </div>
-              </div>
-                    
-                    
-                   </div>
-                </div>
-            </div>
+      
+      <div className='grupo-banner-2 grupo-items'>
+        <div className='text-banner-2'>
+          <div className='banner-header-text'>Encontre tudo o que precisa para o seu casamento</div>
+          <div className='banner-content-text'>Tem mais de 1.000 fornecedores para escolher!</div>
         </div>
-        
+        <div className='pesquisar-fornecedores'>
+          <div className='div-input'>
+            <input type='search' placeholder='Pesquise por nome ou categoria' className='input-banner f-input' />
+          </div>
+          <div className='div-input'>
+            <input type='search' placeholder='Pesquise por cidade/provincia' className='input-banner l-input' />
+          </div>
+          <div>
+            <div className='btn-banner-send'>Pesquisar</div>
+          </div>
+        </div>
+            
+            
+
+      </div>
+               <img src={ff} className='img-bottom' />
+
+    </div>
     </div>
   )
 }

@@ -1,0 +1,131 @@
+/* Estilos gerais para o modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Garante que o modal fica acima de outros elementos */
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  /* Cabeçalho do modal */
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  /* Botão de fechar */
+  .close-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .close-btn:hover {
+    color: #ff4b5c; /* Cor do botão ao passar o mouse */
+  }
+  
+  /* Corpo do modal */
+  .modal-body {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Rodapé do modal */
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  /* Botões do rodapé */
+  .modal-footer .close-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .modal-footer .close-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Botão de abrir o modal */
+  .open-modal-btn {
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .open-modal-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Animações */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsividade para telas pequenas */
+  @media (max-width: 600px) {
+    .modal-content {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .modal-header h2 {
+      font-size: 1.2rem;
+    }
+  
+    .modal-body {
+      font-size: 0.9rem;
+    }
+  }
+  

@@ -1,0 +1,91 @@
+.container-org{
+    margin-bottom: 45px;
+}
+.row1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-left: 80px;
+    padding-right: 80px;
+
+}
+.card-org{
+    margin: 20px;
+}
+
+.card-org{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px 20px 20px;
+    background-color: #FFF;
+    box-shadow: 0 4px 8px #0000000a; 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-org:hover{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px 20px 20px;
+    background-color: #FFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.card-org-header{
+    width: 80%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    gap: 34px;
+}
+
+.card-org-img{
+    width: 50%;
+    height: 160px;
+}
+.card-org-img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-org{
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
+}
+.header-org-sub{
+    color: #333;
+    font-size: 14px;
+}
+.pesq-org{
+    color: orange;
+    text-decoration: none;
+}
+.pesq-org:hover{
+    color: rgb(241, 188, 88);
+}
+.p-ab-org{
+    width: 68px;
+    height: 158px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.p-r-org{
+    position: relative;
+    width: 130px;
+    height: 184px;
+    border-radius: 100%;
+    /* border: 1px solid orange; */
+    right: 30px;
+    transform: rotate(132deg);
+    background: #ffffff;
+    left: -92px;
+    top: -30px;
+}

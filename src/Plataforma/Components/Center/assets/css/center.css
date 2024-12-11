@@ -1,0 +1,139 @@
+.container-center{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    width: 100%;
+}
+.card-center{
+    width: 430px;
+    height: 400px;
+    /* background: #fff6df;
+    background-color: #fff9ead6;
+    background-color: #e7e7e7d6; */
+    background-color: #e7e7e773;
+    position: relative;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.header-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.group-card-center{
+    display: flex;
+    gap: 10px;
+}
+
+.avatar-center > img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.name-time{
+    width: 298px;
+    height: auto;
+}
+.name-center{
+    font-size: 15px;
+    font-weight: 700;
+}
+.time-center{
+    font-size: 13px;
+    font-weight: 300;
+    color: #575757;
+}
+.border-pontos{
+    border: 1px solid #d3dff4;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 32px;
+}
+.pontos{
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.text-center-p > p{
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.group-imagens-center{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.imagem-center-items > img{
+    width: 120px;
+    height: 150px;
+    border-radius: 15px;
+}
+.imagem-center-items-last > img{
+    width: 260px;
+    height: 150px;
+    border-radius: 15px;
+}
+
+/* Editando like e comment */
+.like-comment{
+    display: flex
+    ;
+        gap: 2px;
+}
+
+.heart{
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    cursor: pointer;
+    gap: 3px;
+}
+.svg-heart > svg{
+    fill:#fb88a9;
+    width: 19px;
+    height: 19px;
+    position: relative;
+    top: 3px;
+}
+.letra-heart{
+    color: #fb88a9;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.comment{
+    width: 79px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    cursor: pointer;
+    gap: 3px;
+
+}
+.svg-comment > svg{
+    fill:#8b8b8b;
+    width: 19px;
+    height: 19px;
+    position: relative;
+    top: 3px;
+}
+
+.letra-comment{
+    color: #8b8b8b;
+    font-size: 12px;
+    font-weight: 700;
+}

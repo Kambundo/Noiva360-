@@ -1,0 +1,58 @@
+.fornecedor-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    margin: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .fornecedor-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .fornecedor-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .fornecedor-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .fornecedor-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .fornecedor-price,
+  .fornecedor-address,
+  .fornecedor-services {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .fornecedor-button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .fornecedor-button:hover {
+    background-color: #ff4e41;
+  }
+  

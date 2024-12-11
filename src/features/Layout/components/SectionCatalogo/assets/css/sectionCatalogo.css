@@ -1,0 +1,74 @@
+.sectionCatalogo_container{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 150px;
+    padding-left: 150px;
+}
+
+.g-c{
+    /* border: 1px solid red; */
+    width: 900px;
+    height: 100%;
+}
+
+.h-s-c{
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.h-c-s-c{
+    text-rendering: optimizelegibility;
+    color: #222222;
+    margin-bottom: 20px;
+}
+.content-sectionCatalogo{
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+}
+.c-grupo > a{
+    color: #333;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    height: 33px;
+}
+.c-grupo > a:hover{
+    color: #ff6f61;
+}
+.last-items-m-b{
+    margin-bottom: 25px;
+}
+.btn-see-catalogo{
+    padding: 10px 15px 10px 15px;
+    background-color: #FFD1DC;
+    border-radius: 4px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.btn-see-catalogo:hover{
+    background-color: #FF8AC5;
+}
+
+/* Editando o carrousel */
+.section-catalogo-carousel{
+    width: 100%;
+    height: 250px;
+    /* border: 1px solid red; */
+    position: relative;
+    z-index: 3;
+}
+
+.border-right{
+    background-color: #f8f8f8;
+    width: 590px;
+    height: 353px;
+    position: absolute;
+    right: 0;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
