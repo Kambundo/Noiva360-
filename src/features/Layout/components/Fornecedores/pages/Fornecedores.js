@@ -2,6 +2,16 @@ import React from 'react'
 import Header from '../../Header.js/pages/Index'
 import "../assets/css/fornecedores.css"
 import imagem from '../assets/img/noivos3.jpg'
+import tad from '../assets/img/td3.jpg'
+import camera from '../assets/img/camera.jpg'
+import carro_casamento from '../assets/img/carro_casamento.jpg'
+import convite from '../assets/img/convite3.jpg'
+import bolo from '../assets/img/bolo.jpg'
+import decoracao from '../assets/img/decoracao2.jpg'
+import fotos from '../assets/img/fotos.jpeg'
+import musica from '../assets/img/musica.jpg'
+import video from '../assets/img/casamento_video.mp4'
+
 import { Link } from 'react-router-dom'
 import Wedding from '../components/Wedding'
 import CardFornecedor from '../components/CardFornecedor'
@@ -17,9 +27,9 @@ export default function Fornecedores() {
             <div className='header-fornecedores-text'>Encontre os melhores profissionais de casamento por categoria</div>
 
             <div className='carousel-container-fornecedores'>
-                <Link to={''} className='carousel-card-fornecedores'>
+                <Link to={'/fornecedores/1'} className='carousel-card-fornecedores'>
                     <div className='imagem-carousel-fornecedores'>
-                        <img src={imagem} alt='imagem de fornecedores de casamento' />
+                        <img src={fotos} alt='imagem de fornecedores de casamento' />
                     </div>
                     <div className='footer-card-fornecedores'>
                         <div className='categoria-for'>Fotos</div>
@@ -27,29 +37,50 @@ export default function Fornecedores() {
                     </div>
                 </Link>
 
+               
+                <Link to={''} className='carousel-card-fornecedores'>
+  <div className='imagem-carousel-fornecedores'>
+    <video 
+      width="183px" 
+      height="232px" 
+      autoPlay 
+      muted 
+    //   controls
+    >
+      <source src={video} type="video/mp4" />
+      Seu navegador não suporta a tag de vídeo.
+    </video>
+  </div>
+  <div className='footer-card-fornecedores'>
+    <div className='categoria-for'>Vídeo</div>
+    <div className='quanty fornecedores'>100 fornecedores</div>
+  </div>
+</Link>
+
+
                 <Link to={''} className='carousel-card-fornecedores'>
                     <div className='imagem-carousel-fornecedores'>
-                        <img src={imagem} alt='imagem de fornecedores de casamento' />
+                        <img src={bolo} alt='imagem de fornecedores de casamento' />
                     </div>
                     <div className='footer-card-fornecedores'>
-                        <div className='categoria-for'>Vídeo</div>
-                        <div className='quanty fornecedores'>100 fornecedores</div>
+                        <div className='categoria-for'>Confeiteiros</div>
+                        <div className='quanty fornecedores'>217 fornecedores</div>
                     </div>
                 </Link>
 
                 <Link to={''} className='carousel-card-fornecedores'>
                     <div className='imagem-carousel-fornecedores'>
-                        <img src={imagem} alt='imagem de fornecedores de casamento' />
+                        <img src={decoracao} alt='imagem de fornecedores de decoracao' />
                     </div>
                     <div className='footer-card-fornecedores'>
-                        <div className='categoria-for'>Animação</div>
-                        <div className='quanty fornecedores'>20 fornecedores</div>
+                        <div className='categoria-for'>Decoração</div>
+                        <div className='quanty fornecedores'>217 fornecedores</div>
                     </div>
                 </Link>
 
                 <Link to={''} className='carousel-card-fornecedores'>
                     <div className='imagem-carousel-fornecedores'>
-                        <img src={imagem} alt='imagem de fornecedores de casamento' />
+                        <img src={musica} alt='imagem de fornecedores de casamento' />
                     </div>
                     <div className='footer-card-fornecedores'>
                         <div className='categoria-for'>Música</div>
@@ -59,7 +90,7 @@ export default function Fornecedores() {
 
                 <Link to="" className='carousel-card-fornecedores'>
                     <div className='imagem-carousel-fornecedores'>
-                        <img src={imagem} alt='imagem de fornecedores de casamento' />
+                        <img src={carro_casamento} alt='imagem de fornecedores de casamento' />
                     </div>
                     <div className='footer-card-fornecedores'>
                         <div className='categoria-for'>Carro dos noivos</div>
@@ -69,7 +100,7 @@ export default function Fornecedores() {
 
                 <Link to={''} className='carousel-card-fornecedores'>
                     <div className='imagem-carousel-fornecedores'>
-                        <img src={imagem} alt='imagem de fornecedores de casamento' />
+                        <img src={convite} alt='imagem de fornecedores de casamento' />
                     </div>
                     <div className='footer-card-fornecedores'>
                         <div className='categoria-for'>Convites</div>
@@ -83,20 +114,25 @@ export default function Fornecedores() {
 
         <div className='fornecedores-cat'>
             <Wedding 
-                imagem={imagem} 
+                imagem={camera} 
                 title={'Fotógrafos de casamento'}
                 paragrapho={'Procure entre os melhores profissionais da sua zona para encontrar o fotógrafo que irá registar o seu grande dia.'}
                 btn_name={'fotógrafos'}
             />
 
             <div className='card-ff'>
-            <CardFornecedor
-                imagem={imagem}
-            />
+                <CardFornecedor
+                    imagem={tad}
+                    NameFornecedor={'TAD PIC'}
+                    id={1}
+                />
+                <CardFornecedor
+                    imagem={tad}
+                    NameFornecedor={'Keily Studio'}
+                    id={2}
+                />
 
-<CardFornecedor
-                imagem={imagem}
-            />
+
             </div>
 
             <div className=''>

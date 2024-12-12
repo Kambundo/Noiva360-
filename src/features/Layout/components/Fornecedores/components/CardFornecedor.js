@@ -1,8 +1,9 @@
 import React from 'react'
 import "../assets/css/cardFornecedor.css"
-export default function CardFornecedor({imagem}) {
+import { Link } from 'react-router-dom'
+export default function CardFornecedor({imagem, tad, id, NameFornecedor}) {
   return (
-    <div className="card">
+    <Link to={`/fornecedores/perfil/${id}`} className="card">
     {/* Imagem principal */}
     <div className="main-image">
       <img
@@ -29,9 +30,9 @@ export default function CardFornecedor({imagem}) {
 
     {/* Conteúdo do card */}
     <div className="card-content">
-      <h3>Evvyln & Christian</h3>
-      <p>30 fotos · Funchal, Madeira</p>
+      <h3>{NameFornecedor}</h3>
+      <p>30 fotos · Cmdt Cow-Boy</p>
     </div>
-  </div>
+  </Link>
   )
 }

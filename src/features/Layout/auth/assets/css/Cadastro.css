@@ -125,9 +125,11 @@
 
 .cadastro-gp{
     width: 50%;
-    height: 800px;
-    display: flex;
+    height: 100vh;
+    display: flex
+;
     justify-content: flex-end;
+    overflow: hidden;
     
 }
 .cadastro-gp:nth-child(2){
@@ -137,7 +139,17 @@
 }
 .cadastro-gp img{
     width: 470px;
-    height: 729px;
+    height: 100vh;
+}
+.login-area{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: -60px;
+}
+.bem-vindo{
+    font-size: 20px;
+    font-weight: 200;
 }
 
 .text-postion-absolute{
@@ -147,7 +159,7 @@
 }
 .cadastro-position-relative{
     width: 100%;
-    height: 729px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -331,7 +343,82 @@
     height: 100% !important;
 }
 
-
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 1024px) { /* Para tablets */
+    .auth-form {
+      padding: 2rem;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  
+    .auth-title {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  
+    .form-input {
+      padding: 0.75rem;
+      font-size: 1rem;
+    }
+  
+    .auth-button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) { /* Para tablets pequenos e smartphones maiores */
+    .auth-form {
+      padding: 1.5rem;
+      max-width: 95%;
+      margin: 0 auto;
+    }
+  
+    .auth-title {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+  
+    .form-input {
+      padding: 0.6rem;
+      font-size: 0.9rem;
+    }
+  
+    .auth-button {
+      padding: 0.6rem;
+      font-size: 0.9rem;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) { /* Para smartphones */
+    .auth-form {
+      padding: 1rem;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  
+    .auth-title {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  
+    .form-input {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+    }
+  
+    .auth-button {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+  
 
 
 

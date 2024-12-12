@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import "../assets/css/banner.css";
-import imagem from "../assets/img/casamento.JPG"
+import imagem from "../assets/img/n1.jpeg"
 import imagem2 from "../assets/img/marina.JPG"
 import imagem3 from "../assets/img/mm2.JPG"
 import roda1 from "../assets/img/ROD.webp"

@@ -114,7 +114,7 @@ function Cadastro() {
           <option disabled ></option>
           <option value="Luanda">Luanda</option>
           <option value="Benguela">Benguela</option>
-          <option value="Huíla">Huíla</option>
+          <option value="Huíla" defaultValue={'Huíla'}>Huíla</option>
           <option value="Uíge">Uíge</option>
           <option value="Huambo">Huambo</option>
         </select>
@@ -128,7 +128,7 @@ function Cadastro() {
           required
           disabled={!provinciaSelecionada} // Desabilita o select de municípios até selecionar uma província
         >
-          <option value=""></option>
+          {/* <option value=""></option> */}
           {municipios.map((municipio, index) => (
             <option key={index} value={municipio}>
               {municipio}

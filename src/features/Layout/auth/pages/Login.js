@@ -68,7 +68,9 @@ function Cadastro() {
             </div>
         </div>
         <div className='cadastro-gp c-gp2 c-gp2-login'>
-            
+            <div className='login-area'>
+              <div className='bem-vindo'>Olá, é bom ter-te aqui novamente</div>
+            </div>
             <div className='body-cadastro'>
                     
                     <div className='grupo-dd'>
