@@ -60,21 +60,21 @@ const CardMusico = () => {
   };
 
   return (
-    <div className="main-container">
+    <div className="main-container-musicos">
       {/* Carousel Section */}
-      <div className="carousel-container">
-        <div className="carousel">
+      <div className="carousel-container-musicos">
+        <div className="carousel-musicos">
           {cards.map((card, index) => (
             <div
               key={index}
-              className={`carousel-card ${index === currentIndex ? "active" : ""}`}
+              className={`carousel-card-musicos ${index === currentIndex ? "active" : ""}`}
             >
               <img src={card.img} alt={card.title} />
               <h3>{card.title}</h3>
               <p>⭐ {card.rating} - {card.location}</p>
               <p>{card.price}</p>
               {card.promotion && <p>{card.promotion}</p>}
-              <button className="budget-button">ORÇAMENTO GRATUITO</button>
+              <button className="budget-button-musicos">ORÇAMENTO GRATUITO</button>
             </div>
           ))}
         </div>
@@ -82,11 +82,11 @@ const CardMusico = () => {
       </div>
 
       {/* Zone Section */}
-      <div className="zones-container">
+      <div className="zones-container-musicos">
         <h2>Músicos por zona</h2>
-        <div className="zones">
+        <div className="zones-musicos">
           {zones.map((zone, index) => (
-            <div key={index} className="zone-card">
+            <div key={index} className="zone-card-musicos">
               <h3>{zone.name}</h3>
               <p>{zone.musicians} músicos</p>
             </div>

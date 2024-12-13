@@ -454,14 +454,14 @@ export default function Index() {
         </div>
 
         <div className="grupo-l-e">
-          <Link to={"auth/area-empresas"} className="area-empresas btn-enter">
+          <Link to={"/auth/area-empresas"} className="area-empresas btn-enter">
             Área Empresas
           </Link>
           <div className="grupo-l-r">
-            <Link to={"auth/login"} className="login btn-enter">
+            <Link to={"/auth/login"} className="login btn-enter">
               Entrar
             </Link>
-            <Link to={"auth/cadastro"} className="register btn-enter">
+            <Link to={"/auth/cadastro"} className="register btn-enter">
               Cadastro
             </Link>
           </div>

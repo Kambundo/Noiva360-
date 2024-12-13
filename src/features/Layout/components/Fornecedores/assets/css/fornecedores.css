@@ -29,10 +29,7 @@
     width: 189px;
     transition: .2s;
 }
-.carousel-card-fornecedores:hover .imagem-carousel-fornecedores >img {
-    transform:scale(1.05);
-    transition: .2s;
-}
+
 
 .imagem-carousel-fornecedores{
     width: 183px;
@@ -42,11 +39,32 @@
     overflow: hidden;
     transition: .2s;
 }
-.imagem-carousel-fornecedores > img{
-    width: 100%;
-    height: 100%;
-    border-radius: 3px;
+.imagem-carousel-fornecedores {
+    width: 183px; /* Mesma largura */
+    height: 232px; /* Mesma altura */
+    border-radius: 10px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    transition: .2s;
+    display: flex;
+    align-items: center; /* Centralizar conteúdo verticalmente */
+    justify-content: center; /* Centralizar conteúdo horizontalmente */
 }
+
+.imagem-carousel-fornecedores > img, 
+.imagem-carousel-fornecedores > video {
+    width: 100%; /* Ocupa toda a largura disponível */
+    height: 100%; /* Ocupa toda a altura disponível */
+    object-fit: cover; /* Garante que o conteúdo se ajuste sem distorção */
+    border-radius: 3px;
+    transition: transform .2s; /* Adiciona animação suave para zoom */
+}
+
+.carousel-card-fornecedores:hover .imagem-carousel-fornecedores > img,
+.carousel-card-fornecedores:hover .imagem-carousel-fornecedores > video {
+    transform: scale(1.05);
+}
+
 
 .footer-card-fornecedores{
     width: 170px;
@@ -89,4 +107,8 @@
 .img-center{
     width: 100%;
     height: 60px;
+}
+
+.musicos-container{
+    display: flex;
 }

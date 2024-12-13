@@ -2,6 +2,9 @@ import React from "react";
 import "../assets/css/perfil.css"
 import imagem from '../assets/img/noivos3.jpg'
 import Footer from "../../footer/pages/Footer";
+import Logo from '../assets/img/logoNoiva.svg'
+import { Link } from "react-router-dom";
+import Carousel from "../components/Carousel";
 
 const Perfil = () => {
   const [posts, setPosts] = React.useState([
@@ -89,6 +92,7 @@ const Perfil = () => {
 
   return (
     <div className="layout">
+      
       <aside className="sidebar">
         <img 
           src="https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd"
@@ -176,7 +180,27 @@ const Perfil = () => {
             </div>
           ))}
         </div>
-        <Footer />
+        <div className="Footer-perfil-fornecedores">
+          <div className="instale-app div-perfil">
+            <div className="apk">Instale a App</div>
+            <div className="logo-app">
+              <Link to="https://localhost/dskj" className="border-app"></Link>
+              <Link to="https://localhost/97"  className="border-app"></Link>
+            </div>
+            </div>
+
+            <div className="logo-Name-perfil">
+              <div className="direitt">Todos os direitos reservados</div>
+            <div className="ano-atual">@2024</div>
+            </div>
+
+            <div className="direitos-reservados div-perfil">
+            <div className="logo-white">
+                <img src={Logo} alt="logo" />
+                <div className="noiva360-perfil">Noiva360º</div>
+              </div>
+            </div>
+        </div>
       </main>
       
     </div>

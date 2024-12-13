@@ -1,0 +1,95 @@
+.cardMusico {
+    position: relative;
+    width: 300px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 15px;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.cardMusico:hover {
+    transform: translateY(-10px);
+}
+
+.trending {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background: #ff4757;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.rating {
+    color: #ffd700;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.price {
+    color: #2ecc71;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7f8c8d;
+    margin: 10px 0;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-weight: bold;
+    color: #2d3436;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #7f8c8d;
+}

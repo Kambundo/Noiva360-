@@ -6,6 +6,12 @@
     --light-bg: #ecf0f1;
     --sidebar-width: 300px;
   }
+  @font-face{
+    font-family: 'Angelina Beaty';
+    src: url('../fonts/Angelia\ Beauty.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 .layout {
     display: flex;
@@ -201,7 +207,81 @@
     color: var(--accent-color);
     animation: pulse 0.3s ease;
   }
-  
+  .Footer-perfil-fornecedores{
+    width: 100%;
+    height: 115px;
+    position: relative;
+    overflow: hidden;
+    background-color: #FFF;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  .direitos-reservados{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: auto !important;
+  }
+  .noiva360-perfil{
+    font-family: Angelina Beaty;
+    font-size: 14px;
+    color: #212121;
+    font-weight: normal !important;
+    text-decoration: none;
+    text-align: center;
+  }
+  .div-perfil{
+    /* width: 50%; */
+  }
+  .ano-atual{
+    text-align: center;
+  }
+  .postion-absolute-perfil{
+    width: 1000%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    top: 40px;
+  }
+  .apk{
+    font-size: 17px;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .direitt{
+    font-size: 17px;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .logo-app{
+    display: flex;
+    gap: 10px;
+  }
+  .border-app{
+    border: 1px solid red;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+  }
+
+  .logo-white{
+    width: 60px;
+    height: 60px;
+    background-color: #FF8AC5;
+    border-radius: 100%;
+  }
+  .logo-white > img{
+    width: 100%;
+    height: 100%;
+  }
   @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.2); }
@@ -226,6 +306,20 @@
     .posts-container {
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
+    .Footer-perfil-fornecedores{
+      height: auto;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center;
+    }
+    .div-perfil{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+    }
   }
   
   @media (max-width: 480px) {
@@ -235,5 +329,18 @@
     
     .post {
       margin-bottom: 1.5rem;
+    }
+    .Footer-perfil-fornecedores{
+      height: auto;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center;
+    }
+    .div-perfil{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
     }
   }
