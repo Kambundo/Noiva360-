@@ -8,6 +8,7 @@ import PerfilFornecedores from '../features/Layout/components/Fornecedores/pages
 import Plataforma_Layout from '../Plataforma/Main/pages/Index'
 import Cadastro from "../features/Layout/auth/pages/Cadastro";
 import Login from "../features/Layout/auth/pages/Login";
+import VideosFornecedores from '../features/Layout/components/Fornecedores/components/Videos'
 export default function Routers() {
    return (
          <Routes>
@@ -19,6 +20,7 @@ export default function Routers() {
          <Route path="auth/cadastro" element={ <Cadastro /> } />
          <Route path="auth/login" element={ <Login /> } />
          <Route path="fornecedores" element={ <Fornecedores /> } />
+         <Route path="fornecedores/2" element={ <VideosFornecedores /> } />
          <Route path="fornecedores/1" element={ <PerfilFornecedores /> } />
          
 

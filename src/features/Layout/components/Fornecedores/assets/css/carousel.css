@@ -95,6 +95,10 @@
   
   .scroll-left { left: 0; }
   .scroll-right { right: 0; }
+
+  .fa-map-marker-alt{
+    color: #00000045
+  }
   
   @media (max-width: 768px) {
     .featured-section {

@@ -1,0 +1,114 @@
+.container-videos-a {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+.cards-grid-videos-a {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.card-videos-a {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-videos-a:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-videos-a video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content-videos-a {
+  padding: 1.5rem;
+}
+
+.card-title-videos-a {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.card-provider-videos-a {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+  background: #e3f2fd;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  color: #1976D2;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.card-description-videos-a {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.card-stats-videos-a {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.view-more-btn-videos-a {
+  background: linear-gradient(45deg, #2196F3, #1976D2);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  width: 100%;
+}
+
+.view-more-btn-videos-a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .cards-grid-videos-a {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .card-content-videos-a {
+    padding: 1rem;
+  }
+}
