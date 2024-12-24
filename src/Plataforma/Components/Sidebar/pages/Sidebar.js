@@ -131,7 +131,7 @@ export default function Sidebar() {
         </div>
       </div>
 
-      <footer className="footer">
+      <footer className="footer-plataforma">
         <div className="name-company">Noiva360º - Todos os direitos reservados</div>
       </footer>
     </div>

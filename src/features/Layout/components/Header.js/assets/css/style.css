@@ -31,10 +31,11 @@
   gap: 6px;
 }
 .btn-enter{
-  padding: 10px 15px 10px 15px;
-    border-radius: 40px;
-    background: #FFD1DC;
-    color: #212121;
+  padding: 9px 10px 9px 10px;
+  border-radius: 20px;
+  background: #FFD1DC;
+  font-size: 13px;
+  color: #212121;
     cursor: pointer;
     text-decoration: none;
     transition: .2s ease-in-out;
@@ -218,4 +219,105 @@ li > div > ul {
 }
 .items-link-sub:hover{
   color: #FF8AC5;
+}
+.menu-hamburguer{
+  position: absolute;
+  height: 100px;
+  top: 15px;
+  display: flex;
+  align-items: center;
+  left: 30px;
+}
+.hamburguer-btn{
+  cursor: pointer
+}
+.menu-lateral-hamburguer{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 100px;
+  display:none ;
+}
+.menu-lateral-hamburguer.active_menu{
+   width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 100px;
+    background-color: #2121218c;
+    display: flex;
+}
+.menu-lateral-hamburguer > ul{
+    position: relative;
+    top: 0;
+    height: 100vh;
+    border-top: 1px solid #21212126;
+    background-color: #FFF;
+    width: 250px;
+    left: -250px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  transition: .2s ease-in-out;
+    padding: 10px;
+}
+.close-icon{
+  color: #333;
+  font-size: 37px;
+  position: relative;
+  top: -5px;
+  transition: .2s ease-in-out;
+}
+.menu-lateral-hamburguer.active_menu > ul{
+  left: 0;
+  transition: .2s ease-in-out;
+}
+.menu-lateral-hamburguer__items{
+  color: #333;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.menu-lateral-hamburguer__items:hover{
+  background-color: #FF8AC5;
+  border-radius: 20px;
+    transition: .1s ease-in-out;
+}
+
+@media (min-width: 1121px){
+  .menu-hamburguer{
+    display: none;
+  }
+  .menu-lateral-hamburguer,
+  .menu-lateral-hamburguer > ul
+  {
+    display: none;
+  }
+}
+@media (max-width: 1120px) {
+  .menu-items-container{
+    display: none;
+  }
+}
+
+@media(max-width:600px){
+  .grupo-l-e{
+    display: none;
+  }
+  .logo{
+    width: 100%;
+    padding-right: 40px;
+
+  }
+  .text-banner{
+    text-align: center;
+  }
+  .btns-mobile{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 30px;
+  }
+  .btn-enter{
+    text-align: center;
+  }
 }

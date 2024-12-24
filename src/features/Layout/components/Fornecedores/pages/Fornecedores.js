@@ -9,6 +9,7 @@ import Wedding from '../components/Wedding'
 import CardFornecedor from '../components/CardFornecedor'
 import CardMusicos from '../components/CardMusicos'
 import CarouselFornecedores from '../components/CarouselFornecedores'
+import Footer from '../../footer/pages/Footer'
 export default function Fornecedores() {
     const musicians = [
         {
@@ -48,8 +49,7 @@ export default function Fornecedores() {
             <div className='header-fornecedores-text'>Encontre os melhores profissionais de casamento por categoria</div>
 
             <div className='carousel-container-fornecedores'>
-<CarouselFornecedores />
-
+                <CarouselFornecedores />
             </div>
         </div>
         </div>
@@ -92,6 +92,7 @@ export default function Fornecedores() {
                 </div>
             </div>
         </div>
+        <Footer />
     </div>
   )
 }

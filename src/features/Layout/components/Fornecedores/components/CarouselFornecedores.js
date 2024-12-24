@@ -38,7 +38,7 @@ const vendors = [
     },
     {
         id: 4,
-        name: "Bolo",
+        name: "Buffet",
         description: "Wedding invitation specialist",
         number_forncedor: 50,
         image: bolo,
@@ -55,7 +55,7 @@ const vendors = [
     {
         id: 6,
         name: "Música",
-        description: "Wedding invitation specialist",
+        // description: "Wedding invitation specialist",
         number_forncedor: 550,
         image: musica,
         isVideo: false

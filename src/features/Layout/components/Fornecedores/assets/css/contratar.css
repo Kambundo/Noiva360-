@@ -1,0 +1,374 @@
+:root {
+    --primary-color: #9d4edd;
+    --secondary-color: #f3e8ff;
+    --text-color: #2b2b2b;
+    --border-color: #e0e0e0;
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --danger-color: #f44336;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background: #f5f7fa;
+  }
+  
+  .hire-page-visualize {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .main-content-visualize {
+    margin-left: 0; 
+    padding: 2rem;
+    width: 100%;
+  }
+  
+  .header-bar-visualize-cc {
+    background: #9d4edd;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  .header-bar-visualize-cc > h1{
+    color: #FFF;
+  }
+  .user-profile-visualize {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .supplier-overview-visualize {
+    margin-bottom: 3rem;
+  }
+  
+  .supplier-card-visualize {
+    display: flex;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .supplier-image-visualize {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .supplier-details-visualize {
+    flex: 1;
+  }
+  
+  .rating-visualize {
+    color: #ffd700;
+    margin: 1rem 0;
+  }
+  
+  .supplier-tags-visualize {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .supplier-tags-visualize span {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .pricing-section-visualize {
+    margin: 2rem 0;
+  }
+  
+  .pricing-grid-visualize {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .pricing-card-visualize {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    border: 2px solid transparent;
+  }
+  
+  .pricing-card-visualize:hover {
+    transform: translateY(-5px);
+  }
+  
+  .pricing-card-visualize.selected {
+    border-color: var(--primary-color);
+  }
+  
+  .pricing-card-visualize.premium {
+    transform: scale(1.05);
+  }
+  
+  .recommended-badge-visualize {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+  }
+  
+  .pricing-header-visualize {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .price-visualize {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin: 1rem 0;
+  }
+  
+  .features-list-visualize {
+    list-style: none;
+  }
+  
+  .features-list-visualize li {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .features-list-visualize i {
+    color: var(--success-color);
+  }
+  
+  .booking-form-visualize {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 3rem 0;
+  }
+  
+  .event-form-visualize {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .form-group-visualize {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-row-visualize {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .event-form-visualize input,
+  .event-form-visualize select,
+  .event-form-visualize textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: inherit;
+  }
+  
+  .event-form-visualize textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+  
+  .submit-btn-visualize {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: var(--transition);
+  }
+  
+  .submit-btn-visualize:hover {
+    background: #8a2be2;
+  }
+  
+  .testimonials-section-visualize {
+    margin-top: 2rem;
+  }
+  
+  .testimonials-grid-visualize {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .testimonial-card-visualize {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .testimonial-header-visualize {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonial-header-visualize img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Added CSS for payment section */
+  .payment-section-visualize {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .payment-methods-visualize {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .payment-method-card-visualize {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .payment-method-card-visualize i {
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .payment-method-card-visualize.selected {
+    border-color: var(--primary-color);
+    background-color: var(--secondary-color);
+  }
+  
+  .credit-card-form-visualize {
+    margin-top: 1.5rem;
+  }
+  
+  .pix-payment-visualize,
+  .boleto-payment-visualize {
+    text-align: center;
+    padding: 2rem;
+    background: var(--secondary-color);
+    border-radius: var(--border-radius);
+    margin-top: 1.5rem;
+  }
+  
+  .qr-code-container-visualize {
+    margin: 2rem 0;
+  }
+  
+  .pix-info-visualize {
+    margin-top: 1.5rem;
+  }
+  
+  .pix-key-visualize {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .copy-btn-visualize {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  
+  .boleto-info-visualize {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    color: var(--primary-color);
+  }
+  
+  @media (max-width: 768px) {
+    .supplier-card-visualize {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .supplier-tags-visualize {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .form-row-visualize {
+      grid-template-columns: 1fr;
+    }
+  
+    .pricing-card-visualize.premium {
+      transform: none;
+    }
+  
+    .payment-methods-visualize {
+      grid-template-columns: 1fr;
+    }
+    
+    .pix-key-visualize code {
+      font-size: 0.8rem;
+    }
+  }

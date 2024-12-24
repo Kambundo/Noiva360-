@@ -9,6 +9,11 @@ import Plataforma_Layout from '../Plataforma/Main/pages/Index'
 import Cadastro from "../features/Layout/auth/pages/Cadastro";
 import Login from "../features/Layout/auth/pages/Login";
 import VideosFornecedores from '../features/Layout/components/Fornecedores/components/Videos'
+import Bolos from "../features/Layout/components/Fornecedores/components/Bolos";
+import Fornecedor from "../features/Layout/auth/pages/Fornecedor";
+import SelectFornecedor from "../features/Layout/components/Fornecedores/pages/Select";
+import Fornecedor_Visualizer from "../features/Layout/components/Fornecedores/components/Fornecedor_Visualizer";
+import Contratar_Fornecedor from "../features/Layout/components/Fornecedores/components/Contratar_Fornecedor";
 export default function Routers() {
    return (
          <Routes>
@@ -19,11 +24,15 @@ export default function Routers() {
          </Route>
          <Route path="auth/cadastro" element={ <Cadastro /> } />
          <Route path="auth/login" element={ <Login /> } />
+         <Route path="auth/fornecedores" element={ <Fornecedor /> } />
          <Route path="fornecedores" element={ <Fornecedores /> } />
-         <Route path="fornecedores/2" element={ <VideosFornecedores /> } />
+         <Route path="fornecedores/videos" element={ <VideosFornecedores /> } />
          <Route path="fornecedores/1" element={ <PerfilFornecedores /> } />
+         <Route path="fornecedores/confeitaria" element={ <Bolos /> } />
+         <Route path="fornecedores/confeitaria/nome/2" element={ <SelectFornecedor /> } />
+         <Route path="fornecedores/produto/2" element={ <Fornecedor_Visualizer /> } />
+         <Route path="contratar-fornecedor/1" element={ <Contratar_Fornecedor /> } />
          
-
          </Routes>
        );
     }

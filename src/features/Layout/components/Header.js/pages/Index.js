@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../assets/css/style.css";
 import "../assets/css/dropdown.css";
 import flores from "../assets/img/flores.webp";
 import { Link } from "react-router-dom";
 
 export default function Index() {
+  const [menu, setMenu] = useState(false)
+
+  const menuLateral = () => {
+      setMenu(!menu)
+  } 
+ useEffect(() => {
+   menuLateral()
+  }, [])
+  console.log(menu, "menu")
   const [activeSubmenu, setActiveSubmenu] = useState(false);
   const [isInList, setIsInList] = useState(false);
 
@@ -36,6 +45,34 @@ export default function Index() {
 
       <nav className="navbar">
         <div className="logo">
+        <div className="menu-hamburguer">
+        
+         {menu? 
+          <svg onClick={menuLateral} xmlns="http://www.w3.org/2000/svg" className="hamburguer-btn" width={40} height={50} viewBox="0 0 24 24" style={{fill: '#000000c2', transform: '', msfilter: ''}}><path d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z" /></svg>
+         : <span onClick={menuLateral} className="close-icon">x</span>}
+        </div>
+        <div className={menu?"menu-lateral-hamburguer":"menu-lateral-hamburguer active_menu"}>
+          <ul>
+           
+            <Link to={'meu-casamento'} className="menu-lateral-hamburguer__items">Meu casamento</Link>
+            <Link to={'meu-casamento'} className="menu-lateral-hamburguer__items">Espaços</Link>
+            <Link to={'meu-casamento'} className="menu-lateral-hamburguer__items">Meu casamento</Link>
+            <Link to={'meu-casamento'} className="menu-lateral-hamburguer__items">Meu casamento</Link>
+            <Link to={'meu-casamento'} className="menu-lateral-hamburguer__items">Meu casamento</Link>
+
+            <div className="btns-mobile">
+            <Link to={"/auth/login"} className="login btn-enter">
+              Entrar
+            </Link>
+            <Link to={"/auth/cadastro"} className="register btn-enter">
+              Cadastro
+            </Link>
+            <Link to={"/auth/fornecedores"} className="area-empresas btn-enter">
+            Área Empresas
+          </Link>
+            </div>
+          </ul>
+        </div>
           <div className="text-banner">
             <h2>
               <Link to={"/"}>Noiva360º</Link>
@@ -141,7 +178,7 @@ export default function Index() {
                     onMouseLeave={handleMouseLeaveList}
                     className="elements"
                   >
-                  <div className="grupo-items-submenu">
+                   <div className="grupo-items-submenu">
                     <Link className="org-casamento" to={'organizador-casamento'}>
                       Espaços
                     </Link>
@@ -212,10 +249,10 @@ export default function Index() {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <Link className="link-menu" to={"meu-casamento"}>
+              <Link className="link-menu" to={"fornecedores"}>
               Fornecedores
               </Link>
-              {activeSubmenu && (
+              {/* {activeSubmenu && (
                 <div className="submenu-container">
                   <ul
                     onMouseEnter={handleMouseEnterList}
@@ -285,8 +322,8 @@ export default function Index() {
                   </div>
                     
                   </ul>
-                </div>
-              )}
+                </div> 
+              )} */}
             </li>
             <li
               className="li"
@@ -454,7 +491,7 @@ export default function Index() {
         </div>
 
         <div className="grupo-l-e">
-          <Link to={"/auth/area-empresas"} className="area-empresas btn-enter">
+          <Link to={"/auth/fornecedores"} className="area-empresas btn-enter">
             Área Empresas
           </Link>
           <div className="grupo-l-r">
