@@ -55,8 +55,8 @@ export default function Index() {
           <ul>
            
             <Link to={'meu-casamento'} className="menu-lateral-hamburguer__items">Meu casamento</Link>
+            <Link to={'fornecedores'} className="menu-lateral-hamburguer__items">Fornecedores</Link>
             <Link to={'meu-casamento'} className="menu-lateral-hamburguer__items">Espaços</Link>
-            <Link to={'meu-casamento'} className="menu-lateral-hamburguer__items">Meu casamento</Link>
             <Link to={'meu-casamento'} className="menu-lateral-hamburguer__items">Meu casamento</Link>
             <Link to={'meu-casamento'} className="menu-lateral-hamburguer__items">Meu casamento</Link>
 
