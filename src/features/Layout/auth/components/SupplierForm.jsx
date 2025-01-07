@@ -1,47 +1,75 @@
+import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
-
+import swal from 'sweet-alert'
 const validationSchema = Yup.object({
   nome: Yup.string().required('Nome é obrigatório'),
   descricao: Yup.string().required('Descrição é obrigatória'),
   tipoDeServico: Yup.string().required('Tipo de serviço é obrigatório'),
-  avaliacao: Yup.number().min(0).max(5).required('Avaliação é obrigatória'),
   nif: Yup.string().required('NIF é obrigatório'),
   categoria: Yup.string().required('Categoria é obrigatória')
 });
 
-function SupplierForm({ userData }) {
-  const handleSubmit = async (values, { setSubmitting }) => {
+
+
+function SupplierForm({ onSubmit }) {
+  const sobrenome = localStorage.getItem('sobrenome')
+  const ID = localStorage.getItem('ID')
+   const [erros, setErros] = useState([])
+  const handleSubmit = async (values, { setSubmitting, setErrors }) => {
     try {
-      const supplierData = {
-        ...values,
-        GestorId: userData.id // ID do usuário da etapa anterior
-      };
-      //await axios.post('/api/suppliers', supplierData);
-      alert('Cadastro realizado com sucesso!');
+      const response = await axios.post('https://noiva360-gules.vercel.app/fornecedores', values);
+      await swal({
+        text: `status 200`,
+        icon: 'success',
+        timer: 2700,
+        button: false,
+      });
+      onSubmit({ ...response.data, ...values });
+      console.log(values, 'dados do + vale');
     } catch (error) {
-      console.error('Erro ao cadastrar fornecedor:', error);
+      await swal({
+        text: `${error.response.data}`,
+        icon: 'error',
+        timer: 2700,
+        button: true,
+      });
+      setErros(error.response.data)
+      console.log(error.response.data, "ll")
+      console.error('Erro ao cadastrar usuário:', error);
+      
+      // Se houver erros retornados pelo backend, popule os erros no Formik
+      if (error.response && error.response.data) {
+        const backendErrors = error.response.data;
+        // Mapear os erros do backend para o formato que o Formik espera
+        const formikErrors = backendErrors.reduce((acc, error) => {
+          acc[error.field] = error.message;
+          return acc;
+        }, {});
+        
+        // Definir os erros no Formik
+        setErrors(formikErrors);
+      }
     }
     setSubmitting(false);
   };
-
   return (
     <Formik
       initialValues={{
         nome: '',
         descricao: '',
         tipoDeServico: '',
-        avaliacao: '',
         nif: '',
-        categoria: ''
+        categoria: '',
+        gestorID: ID
       }}
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
       {({ isSubmitting }) => (
         <Form className="form">
-          <h2>Cadastro de Fornecedor</h2>
+          <h2>Só mais 1 passo Sr. {sobrenome}</h2>
 
           <div className="form-group">
             <label htmlFor="nome">Nome do Estabelecimento</label>
