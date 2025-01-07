@@ -67,7 +67,7 @@ export default function Index() {
             <Link to={"/auth/cadastro"} className="register btn-enter">
               Cadastro
             </Link>
-            <Link to={"/auth/fornecedores"} className="area-empresas btn-enter">
+            <Link to={"/auth/fornecedores/login"} className="area-empresas btn-enter">
             Área Empresas
           </Link>
             </div>
@@ -491,7 +491,7 @@ export default function Index() {
         </div>
 
         <div className="grupo-l-e">
-          <Link to={"/auth/fornecedores"} className="area-empresas btn-enter">
+          <Link to={"/auth/fornecedores/login"} className="area-empresas btn-enter">
             Área Empresas
           </Link>
           <div className="grupo-l-r">

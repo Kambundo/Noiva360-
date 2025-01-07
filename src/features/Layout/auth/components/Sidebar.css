@@ -1,0 +1,124 @@
+/* Sidebar.css */
+.sidebar {
+  width: 280px;
+  background: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #eee;
+  transition: width 0.3s ease;
+}
+
+.sidebar-header {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebar-header h2 {
+  color: #4a90e2;
+  font-size: 1.5em;
+}
+
+.sidebar-nav {
+  padding: 20px;
+  flex: 1;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  color: #666;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav a svg {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.sidebar-nav a:hover {
+  background: #f0f7ff;
+  color: #4a90e2;
+}
+
+.sidebar-nav a.active {
+  background: #4a90e2;
+  color: white;
+}
+
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-details {
+  flex: 1;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.user-role {
+  font-size: 0.9em;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+    position: fixed;
+    z-index: 100;
+  }
+
+  .sidebar:hover {
+    width: 280px;
+  }
+
+  .sidebar-header h2,
+  .user-details,
+  .sidebar-nav a span {
+    display: none;
+  }
+
+  .sidebar:hover .sidebar-header h2,
+  .sidebar:hover .user-details,
+  .sidebar:hover .sidebar-nav a span {
+    display: block;
+  }
+
+  .sidebar-nav a {
+    justify-content: center;
+  }
+
+  .sidebar:hover .sidebar-nav a {
+    justify-content: flex-start;
+  }
+
+  .sidebar-nav a svg {
+    margin-right: 0;
+  }
+
+  .sidebar:hover .sidebar-nav a svg {
+    margin-right: 10px;
+  }
+}
