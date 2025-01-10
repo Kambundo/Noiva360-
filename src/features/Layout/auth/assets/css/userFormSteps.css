@@ -1,0 +1,325 @@
+.form-container-f-s {
+  max-width: 600px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.steps-f-s {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  position: relative;
+  padding: 0 20px;
+}
+
+.step-f-s {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.step-f-s.active {
+  background-color: #4CAF50;
+  color: white;
+  animation: bounce 0.5s ease;
+}
+
+.step-f-s.current {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.step-title-f-s {
+  text-align: center;
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 5px;
+}
+
+.welcome-header-f-s {
+  text-align: center;
+  color: #4CAF50;
+  animation: fadeInDown 0.5s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.step-connector-f-s {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  right: 50px;
+  height: 2px;
+  background-color: #e0e0e0;
+  transform: translateY(-50%);
+}
+
+.step-connector-progress-f-s {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #4CAF50;
+  transition: width 0.5s ease;
+}
+
+.form-step-f-s {
+  animation: slideInFromLeft 0.5s ease forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.form-group-f-s {
+  margin-bottom: 20px;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInInput 0.5s ease forwards;
+}
+
+@keyframes slideInInput {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1; 
+    transform: translateX(0);
+  }
+}
+
+.form-group-f-s:nth-child(1) { animation-delay: 0.1s; }
+.form-group-f-s:nth-child(2) { animation-delay: 0.2s; }
+.form-group-f-s:nth-child(3) { animation-delay: 0.3s; }
+
+.error-message-f-s {
+  color: #ff0000;
+  font-size: 12px;
+  margin-top: 5px;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInError 0.3s ease forwards;
+}
+
+@keyframes fadeInError {
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes fadeInInput {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.form-group-f-s label {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #666;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.form-group-f-s input, .form-group-f-s select {
+  width: 100%;
+  padding: 15px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background: transparent;
+}
+
+.form-group-f-s input:focus,
+.form-group-f-s select:focus
+ {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.form-group-f-s input:focus + label,
+.form-group-f-s input:not(:placeholder-shown) + label,
+.form-group-f-s select:focus + label, .form-group-f-s select:not(:placeholder-shown) + label {
+  top: 0;
+  font-size: 12px;
+  background: white;
+  padding: 0 4px;
+  color: #4CAF50;
+}
+
+.form-group-f-s input.error,
+.form-group-f-s select.error {
+  border-color: #ff0000;
+}
+
+
+.buttons-f-s {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button-f-s {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.next-f-s {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.next-f-s:not(:disabled) {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.next-f-s:disabled {
+  background-color: #e0e0e0 !important;
+  cursor: not-allowed;
+  color: #999;
+  opacity: 0.7;
+}
+
+.prev-f-s {
+  background-color: #666;
+  color: white;
+}
+
+.button-f-s:hover {
+  opacity: 0.9;
+}
+
+.button-f-s:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form-container-f-s {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .step-f-s {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .step-connector-f-s {
+    left: 35px;
+    right: 35px;
+  }
+
+  .buttons-f-s {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button-f-s {
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  .form-group-f-s input, .form-group-f-s select {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+
+  .form-group-f-s label {
+    font-size: 14px;
+  }
+
+  .form-group-f-s input:focus + label,
+  .form-group-f-s input:not(:placeholder-shown) + label,
+  .form-group-f-s select:focus + label, .form-group-f-s select:not(:placeholder-shown) + label {
+    font-size: 11px;
+  }
+
+  .infor-ss{
+    width: 600px ;
+    margin: 0 auto !important;
+    padding: 20px !important;
+    font-family: Arial, sans-serif !important;
+  }
+
+  .welcome-header-f-s {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .form-container-f-s {
+    padding: 10px;
+  }
+
+  .step-f-s {
+    width: 25px;
+    height: 25px;
+    font-size: 11px;
+  }
+
+  .step-connector-f-s {
+    left: 30px;
+    right: 30px;
+  }
+}

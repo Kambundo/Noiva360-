@@ -4,13 +4,11 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import swal from 'sweet-alert'
 const validationSchema = Yup.object({
-  nome: Yup.string().required('Nome é obrigatório'),
-  descricao: Yup.string().required('Descrição é obrigatória'),
-  tipoDeServico: Yup.string().required('Tipo de serviço é obrigatório'),
+  nome: Yup.string().required(' O nome é obrigatório'),
+  // tipoDeServico: Yup.string().required('Tipo de serviço é obrigatório'),
   nif: Yup.string().required('NIF é obrigatório'),
   categoria: Yup.string().required('Categoria é obrigatória')
 });
-
 
 
 function SupplierForm({ onSubmit }) {
@@ -59,7 +57,7 @@ function SupplierForm({ onSubmit }) {
       initialValues={{
         nome: '',
         descricao: '',
-        tipoDeServico: '',
+        // tipoDeServico: '',
         nif: '',
         categoria: '',
         gestorID: ID
@@ -72,18 +70,18 @@ function SupplierForm({ onSubmit }) {
           <h2>Só mais 1 passo Sr. {sobrenome}</h2>
 
           <div className="form-group">
-            <label htmlFor="nome">Nome do Estabelecimento</label>
+            <label htmlFor="nome">Nome da empresa </label>
             <Field type="text" name="nome" id="nome" />
             <ErrorMessage name="nome" component="div" className="error" />
           </div>
 
-          <div className="form-group">
+          {/* <div className="form-group">
             <label htmlFor="descricao">Descrição</label>
             <Field as="textarea" name="descricao" id="descricao" />
             <ErrorMessage name="descricao" component="div" className="error" />
-          </div>
+          </div> */}
 
-          <div className="form-group">
+          {/* <div className="form-group">
             <label htmlFor="tipoDeServico">Tipo de Serviço</label>
             <Field as="select" name="tipoDeServico" id="tipoDeServico">
               <option value="">Selecione</option>
@@ -93,13 +91,7 @@ function SupplierForm({ onSubmit }) {
               <option value="Música">Música</option>
             </Field>
             <ErrorMessage name="tipoDeServico" component="div" className="error" />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="avaliacao">Avaliação</label>
-            <Field type="number" name="avaliacao" id="avaliacao" min="0" max="5" step="0.5" />
-            <ErrorMessage name="avaliacao" component="div" className="error" />
-          </div>
+          </div> */}
 
           <div className="form-group">
             <label htmlFor="nif">NIF</label>
@@ -108,7 +100,7 @@ function SupplierForm({ onSubmit }) {
           </div>
 
           <div className="form-group">
-            <label htmlFor="categoria">Categoria</label>
+            <label htmlFor="categoria">Categoria <span color='orangee'>*</span> </label>
             <Field as="select" name="categoria" id="categoria">
               <option value="">Selecione</option>
               <option value="premium">Premium</option>
